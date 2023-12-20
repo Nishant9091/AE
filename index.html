@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AXEPERT EXHIBITS</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
+        integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <div class="loader">
+        <!-- <div class="bg-img">
+            <img src="nasa-Q1p7bh3SHj8-unsplash.jpg" alt="">
+            <img src="robynne-hu-HOrhCnQsxnQ-unsplash.jpg" alt="">
+            <img src="paul-frenzel-MnHQMzC6n-o-unsplash.jpg" alt="">
+            <img src="alexandre-debieve-FO7JIlwjOtU-unsplash.jpg" alt="">
+            <img src="luca-bravo-XJXWbfSo2f0-unsplash.jpg" alt="">
+        </div> -->
+        <div class="loader-clip clip-top">
+            <div class="marquee">
+                <div class="marquee-container">
+                    <!-- <span>AXEPERT EXHIBITS</span> -->
+                    <!-- <span>AXEPERT EXHIBITS</span> -->
+                    DIGITAL STUDIO
+                    <!-- <span>AXEPERT EXHIBITS</span> -->
+                    <!-- <span>AXEPERT EXHIBITS</span> -->
+                </div>
+            </div>
+        </div>
+        <div class="loader-clip clip-bottom">
+            <div class="marquee">
+                <div class="marquee-container">
+                    <!-- <span>AXEPERT EXHIBITS</span> -->
+                    <!-- <span>AXEPERT EXHIBITS</span> -->
+                    NEXT GEN WORK
+                    <!-- <span>AXEPERT EXHIBITS</span> -->
+                    <!-- <span>AXEPERT EXHIBITS</span> -->
+                </div>
+            </div>
+        </div>
+        <div class="clip-center">
+            <div class="marquee">
+                <div class="marquee-container">
+                    <!-- <span>AXEPERT EXHIBITS</span> -->
+                    <!-- <span>AXEPERT EXHIBITS</span> -->
+                    AXEPERT EXHIBITS
+                    <!-- <span>AXEPERT EXHIBITS</span> -->
+                    <!-- <span>AXEPERT EXHIBITS</span> -->
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="nav">
+                <div class="logo"><img src="https://axepertexhibits.com/assets/upload/logo/logo.png" alt=""
+                        style="filter: invert(1); width: 3rem;"></div>
+                <div class="nav-items">
+                    <a href="AE/dark/Portfolio.html">Creations</a>
+                    <a href="#">Capabilities</a>
+                    <a href="#">Info</a>
+                </div>
+            </div>
+            <div class="footer">
+                <p>Next Level<br>Digital Work </p>
+                <p>Made In India</p>
+                <p>AXEPERT EXHIBITS 2023</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var tl = gsap.timeline();
+
+    tl.from(".clip-top, .clip-bottom", {
+        // delay: 1,
+        height: "50vh",
+        ease: "power2.inOut"
+    });
+
+    tl.to(".marquee", {
+        // delay: 0.75,
+        top: "50%",
+        ease: "power2.inOut",
+    });
+
+    tl.from(".clip-top .marquee, .clip-bottom .marquee", {
+        // delay: 1,
+        left: "100%",
+        ease: "power1.inOut",
+    });
+
+    tl.from(".clip-center .marquee", {
+        // delay: 1,
+        left: "-50%",
+        ease: "power1.inOut",
+    });
+
+    tl.to(".clip-top", {
+        // delay: 6,
+        clipPath: "inset(0 0 100% 0)",
+        ease: "power2.inOut",
+    });
+
+    tl.to(".clip-bottom", {
+        // delay: 6,
+        clipPath: "inset(100% 0 0 0)",
+        ease: "power2.inOut",
+    });
+
+    tl.to(".clip-top .marquee, .clip-bottom .marquee, .clip-center .marquee span", {
+        // delay: 6,
+        opacity: 0,
+        ease: "power2.inOut",
+    });
+
+    tl.from(".bg-img img", {
+        z:300,
+        scale: 0,
+        // ease: "power1.inOut"
+        // delay: 3,
+        // duration:2,
+    });
+
+    tl.from(".nav-items", {
+        x:0,
+        duration: 1
+    });
+</script>
+
+</html>
