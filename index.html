@@ -9,13 +9,41 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
         integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/kursor@0.1.6/dist/kursor.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/kursor@0.1.6/dist/kursor.min.js"></script>
 </head>
 
 <body>
+    <div id="overlay"></div>
+    <div id="blob"></div>
+    <div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+
     <div class="loader">
         <!-- <div class="bg-img">
             <img src="nasa-Q1p7bh3SHj8-unsplash.jpg" alt="">
-            <img src="robynne-hu-HOrhCnQsxnQ-unsplash.jpg" alt="">
+            <img src="robynne-hu-HOrhCnQsxnQ-unsplash.jpg" alt="">  
             <img src="paul-frenzel-MnHQMzC6n-o-unsplash.jpg" alt="">
             <img src="alexandre-debieve-FO7JIlwjOtU-unsplash.jpg" alt="">
             <img src="luca-bravo-XJXWbfSo2f0-unsplash.jpg" alt="">
@@ -25,7 +53,7 @@
                 <div class="marquee-container">
                     <!-- <span>AXEPERT EXHIBITS</span> -->
                     <!-- <span>AXEPERT EXHIBITS</span> -->
-                    DIGITAL STUDIO
+                    DIGITAL BRAND
                     <!-- <span>AXEPERT EXHIBITS</span> -->
                     <!-- <span>AXEPERT EXHIBITS</span> -->
                 </div>
@@ -55,79 +83,41 @@
         </div>
         <div class="container">
             <div class="nav">
-                <div class="logo"><img src="https://axepertexhibits.com/assets/upload/logo/logo.png" alt=""
-                        style="filter: invert(1); width: 3rem;"></div>
+                <div class="logo">
+                    <div class="rotate-box" data-speed="1" data-lag="0.7">
+                        <a href="#" class="rotate-circle fsz-30 rotate-text d-inline-block text-uppercase">
+                            <svg class="textcircle" viewBox="0 0 500 500">
+                                <defs>
+                                    <path id="textcircle" d="M250,400 a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z">
+                                    </path>
+                                </defs>
+                                <text>
+                                    <textPath xlink:href="#textcircle" textLength="900" style="font-size: 1.2rem;"> . Axepert Exhibits . Axepert
+                                        Exhibits
+                                    </textPath>
+                                </text>
+                            </svg>
+                        </a>
+                        <a class="icon fsz-45" href="../../index.html"><img
+                                src="https://axepertexhibits.com/assets/upload/logo/logo.png"></a>
+                    </div>
+                </div>
                 <div class="nav-items">
-                    <a href="AE/dark/Portfolio.html">Creations</a>
-                    <a href="#">Capabilities</a>
-                    <a href="#">Info</a>
+                    <a href="Portfolio/dark/Portfolio.html">Creations</a>
+                    <a href="Services/Services/Services.html">Capabilities</a>
+                    <a href="dark/contact.html">Info</a>
                 </div>
             </div>
             <div class="footer">
                 <p>Next Level<br>Digital Work </p>
                 <p>Made In India</p>
-                <p>AXEPERT EXHIBITS 2023</p>
+                <p>AXEPERT EXHIBITS SInce 1990</p>
             </div>
         </div>
     </div>
+
 </body>
-<script>
-    var tl = gsap.timeline();
 
-    tl.from(".clip-top, .clip-bottom", {
-        // delay: 1,
-        height: "50vh",
-        ease: "power2.inOut"
-    });
-
-    tl.to(".marquee", {
-        // delay: 0.75,
-        top: "50%",
-        ease: "power2.inOut",
-    });
-
-    tl.from(".clip-top .marquee, .clip-bottom .marquee", {
-        // delay: 1,
-        left: "100%",
-        ease: "power1.inOut",
-    });
-
-    tl.from(".clip-center .marquee", {
-        // delay: 1,
-        left: "-50%",
-        ease: "power1.inOut",
-    });
-
-    tl.to(".clip-top", {
-        // delay: 6,
-        clipPath: "inset(0 0 100% 0)",
-        ease: "power2.inOut",
-    });
-
-    tl.to(".clip-bottom", {
-        // delay: 6,
-        clipPath: "inset(100% 0 0 0)",
-        ease: "power2.inOut",
-    });
-
-    tl.to(".clip-top .marquee, .clip-bottom .marquee, .clip-center .marquee span", {
-        // delay: 6,
-        opacity: 0,
-        ease: "power2.inOut",
-    });
-
-    tl.from(".bg-img img", {
-        z:300,
-        scale: 0,
-        // ease: "power1.inOut"
-        // delay: 3,
-        // duration:2,
-    });
-
-    tl.from(".nav-items", {
-        x:0,
-        duration: 1
-    });
-</script>
+<script src="index.js"></script>
 
 </html>
